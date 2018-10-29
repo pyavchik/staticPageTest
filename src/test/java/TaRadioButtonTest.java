@@ -1,5 +1,3 @@
-package taLocator;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import io.trueautomation.client.driver.TrueAutomationDriver;
@@ -27,19 +25,16 @@ public class TaRadioButtonTest {
 
 
     @Test
-    public void radioButtonExampleTest() throws InterruptedException {
+    public void radioButtonExampleTest() {
         driver.get("https://learn.letskodeit.com/p/practice");
-        //Thread.sleep(1000);
         driver.findElement(radioButtonExampleBMW).click();
-        //Thread.sleep(1000);
         driver.findElement(radioButtonExampleBenz).click();
-        //Thread.sleep(1000);
         driver.findElement(radioButtonExampleHonda).click();
     }
 
     @AfterTest
     public void afterTest() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(1000);
         driver.quit();
     }
 }

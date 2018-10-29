@@ -1,5 +1,3 @@
-package taLocator;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import io.trueautomation.client.driver.TrueAutomationDriver;
@@ -27,19 +25,16 @@ public class TaSelectClassTest {
     }
 
     @Test
-    public void selectClassExampleTest() throws InterruptedException {
+    public void selectClassExampleTest() {
         driver.get("https://learn.letskodeit.com/p/practice");
-        //Thread.sleep(1000);
         driver.findElement(selectClassExampleBMW).click();
-        //Thread.sleep(1000);
         driver.findElement(selectClassExampleBenz).click();
-        //Thread.sleep(1000);
         driver.findElement(selectClassExampleHonda).click();
     }
 
     @AfterTest
     public void afterTest() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(1000);
         driver.quit();
     }
 }
